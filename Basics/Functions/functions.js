@@ -1,30 +1,30 @@
 //  Normal Function
 
-function lodo() {
-  console.log("I am a lodo trader");
+function example() {
+  console.log("I am a lexample");
 }
 
-lodo();
+example();
 
 // Function Expression
 
-const pandit = function () {
-  console.log("Mera nam pandit hai ");
+const boomerang = function () {
+  console.log("I am Boomerang");
 };
 
-pandit();
+boomerang();
 
 // Anonymous Fucntion - A function without Name
 
 let anonymous = function () {
-  console.log("oo");
+  console.log("I am function with a name");
 };
 anonymous();
 
 // IIFE - Immmediately Invoked Function Expression
 
-(function gandu() {
-  console.log("Hi I am Gansu");
+(function printName() {
+  console.log("Hi I am Pranay");
 })();
 
 // Arrow Functions
