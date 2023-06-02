@@ -30,3 +30,5 @@ dataUpdate()
   .catch((error) => {
     console.log(error);
   });
+
+console.log(...data, "Des");
