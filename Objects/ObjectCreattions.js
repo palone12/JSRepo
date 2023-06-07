@@ -35,3 +35,59 @@ console.log(product);
 //Comparing Two object can be done with JSON.strignify
 
 console.log(JSON.stringify(product) === JSON.stringify(product2));
+
+car.power = "1000HP";
+car["EngineCylinder"] = "20Cylinder";
+
+console.log(car);
+
+for (const x in car) {
+  console.log(`${x}: ${car[x]}`);
+}
+
+const user = {
+  name: "John Doe",
+
+  email: "john.doe@example.com",
+
+  age: 25,
+
+  dob: "08/02/1989",
+
+  active: true,
+};
+
+// iterate over the user object
+
+for (const key in user) {
+  console.log(`${key}: ${user[key]}`);
+}
+
+// name: John Doe
+
+// email: john.doe@example.com
+
+// age: 25
+
+// dob: 08/02/1989
+
+// active: true
+
+const data = Object.keys(car);
+console.log(data);
+const data2 = Object.values(car);
+console.log(data2);
+
+// Pass by refernence
+
+let person1 = {
+  name: "John",
+
+  age: 30,
+};
+
+let person2 = person1;
+
+person2.name = "Jane";
+
+console.log(person1);
