@@ -53,3 +53,37 @@ const result = nums.reduce((acc, ele) => {
 
 // if intial value is not provided then it takes first value as intail value
 console.log(result);
+
+// Creating polyfill
+
+Array.prototype.myMap = function (cb) {
+  let temp = [];
+  for (let i = 0; i < this.length; i++) {
+    temp.push(cb(this[i], i, this));
+  }
+  return temp;
+};
+
+function cb(ele) {
+  return ele * ele;
+}
+
+console.log(nums.myMap(cb), "Custom map");
+
+// Creating Custom Filter function
+
+Array.prototype.filterCustom = function (cb) {
+  let temp = [];
+  for (let i = 0; i < this.length; i++) {
+    if (cb(this[i])) {
+      temp.push(this[i]);
+    }
+  }
+  return temp;
+};
+
+function callBack(ele) {
+  return ele % 2 === 0;
+}
+
+console.log(nums.filterCustom(callBack), "Custom Filter");
